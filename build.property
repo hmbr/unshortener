@@ -1,0 +1,6 @@
+src.dir=src
+classes.dir=temp
+lib.dir=lib
+dist.dir = dist
+dist.name = unshortening
+main-class=hmbr.unshorted.UnshortedGui

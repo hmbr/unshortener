@@ -1,0 +1,30 @@
+<project default="pack">
+
+	<property file="build.property" />
+	
+	<target name="dirs">
+		<mkdir dir="${classes.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>
+	
+	<target name="clean">
+		<delete dir="${classes.dir}/">
+		</delete>
+		<delete file="${dist.dir}/${dist.name}.jar">
+		</delete>
+
+	</target>
+
+	<target name="compile" depends="dirs">
+		<javac destdir="${classes.dir}" srcdir="${src.dir}" />
+	</target>
+
+	<target name="pack" depends="clean,compile">
+		<jar destfile="${dist.dir}/${dist.name}.jar" basedir="${classes.dir}">
+			<manifest>
+				<attribute name="Main-Class" value="${main-class}" />
+			</manifest>
+		</jar>
+	</target>
+
+</project>
