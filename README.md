@@ -1,13 +1,13 @@
-=this is an unshortener
+# This is an unshortener
 
 You need ant to build the program
 
-=Compile
+## Compile
 
 Just run
  ant
 
-=Run 
+## Run 
 
 Execute 
  dist/unshortening.jar 
